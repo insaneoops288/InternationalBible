@@ -31,6 +31,8 @@ void AInternationalBibleGameMode::BeginPlay()
 	RowNames = Tables[0]->GetRowNames();
 	TArray<FString> EachBibles;
 
+	FString Test;
+
 	for (auto& Name : RowNames)
 	{
 		FAfrikaansTable* Info = Tables[0]->FindRow<FAfrikaansTable>(Name, FString(""));
@@ -38,7 +40,11 @@ void AInternationalBibleGameMode::BeginPlay()
 		{
 			EachBibles.Add(Info->Text);
 
-			UE_LOG(LogTemp, Warning, TEXT("%s : %s"), *Info->BookName, *Info->Text);
+			Test.Append(Info->Text + "\n");
+
+			// UE_LOG(LogTemp, Warning, TEXT("%s : %s"), *Info->BookName, *Info->Text);
 		}
 	}
+
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *Test);
 }
