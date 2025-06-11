@@ -13,6 +13,9 @@ class AInternationalBibleGameMode : public AGameModeBase
 
 public:
 	AInternationalBibleGameMode();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bible")
+	TArray<class UDataTable*> Tables;
 };
 
 
