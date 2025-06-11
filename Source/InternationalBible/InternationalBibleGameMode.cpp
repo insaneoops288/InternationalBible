@@ -23,18 +23,20 @@ void AInternationalBibleGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	TArray<FName> RowNames = Tables[4]->GetRowNames();
+	UDataTable* SelectedTable = Tables[4];
 
-	FString Test;
+	TArray<FName> RowNames = SelectedTable->GetRowNames();
 
-	for (auto& Name : RowNames)
+	FString ColectStrings;
+
+	for (auto& Key : RowNames)
 	{
-		FAfrikaansTable* Info = Tables[4]->FindRow<FAfrikaansTable>(Name, FString(""));
+		FAfrikaansTable* Info = SelectedTable->FindRow<FAfrikaansTable>(Key, FString(""));
 		if (Info->BookNumber == 1 && Info->Chapter == 1)
 		{
-			Test.Append(Info->Text + "\n");
+			ColectStrings.Append(Info->Text + "\n");
 		}
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("%s"), *Test);
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *ColectStrings);
 }
