@@ -23,26 +23,16 @@ void AInternationalBibleGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UBibleGameInstance* GameInstance = Cast<UBibleGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-
-	// UDataTable* SkeletalMeshAsset3 = LoadObject<UDataTable>(NULL, Tables[0], NULL, LOAD_None, NULL);
-
-	TArray<FName> RowNames;
-	RowNames = Tables[2]->GetRowNames();
-	// TArray<FString> EachBibles;
+	TArray<FName> RowNames = Tables[4]->GetRowNames();
 
 	FString Test;
 
 	for (auto& Name : RowNames)
 	{
-		FAfrikaansTable* Info = Tables[0]->FindRow<FAfrikaansTable>(Name, FString(""));
+		FAfrikaansTable* Info = Tables[4]->FindRow<FAfrikaansTable>(Name, FString(""));
 		if (Info->BookNumber == 1 && Info->Chapter == 1)
 		{
-			// EachBibles.Add(Info->Text);
-
 			Test.Append(Info->Text + "\n");
-
-			// UE_LOG(LogTemp, Warning, TEXT("%s : %s"), *Info->BookName, *Info->Text);
 		}
 	}
 
