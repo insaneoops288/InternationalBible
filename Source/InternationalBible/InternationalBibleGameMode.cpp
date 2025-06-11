@@ -23,10 +23,10 @@ void AInternationalBibleGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GetBible(4);
+	GetBible(4, 1, 1);
 }
 
-FString AInternationalBibleGameMode::GetBible(int32 Index)
+FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int32 Chapter)
 {
 	UDataTable* SelectedTable = Tables[Index];
 
@@ -37,7 +37,7 @@ FString AInternationalBibleGameMode::GetBible(int32 Index)
 	for (auto& Key : RowNames)
 	{
 		FAfrikaansTable* Info = SelectedTable->FindRow<FAfrikaansTable>(Key, FString(""));
-		if (Info->BookNumber == 1 && Info->Chapter == 1)
+		if (Info->BookNumber == BookNumber && Info->Chapter == Chapter)
 		{
 			ColectStrings.Append(Info->Text + "\n");
 		}

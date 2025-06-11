@@ -18,7 +18,7 @@ public:
 	TArray<class UDataTable*> Tables;
 	virtual void BeginPlay() override;
 
-	FString GetBible(int32 Index);
+	FString GetBible(int32 Index, int32 BookNumber, int32 Chapter);
 };
 
 
