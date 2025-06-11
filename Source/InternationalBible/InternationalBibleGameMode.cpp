@@ -23,7 +23,12 @@ void AInternationalBibleGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UDataTable* SelectedTable = Tables[4];
+	GetBible(4);
+}
+
+FString AInternationalBibleGameMode::GetBible(int32 Index)
+{
+	UDataTable* SelectedTable = Tables[Index];
 
 	TArray<FName> RowNames = SelectedTable->GetRowNames();
 
@@ -39,4 +44,6 @@ void AInternationalBibleGameMode::BeginPlay()
 	}
 
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *ColectStrings);
+
+	return ColectStrings;
 }

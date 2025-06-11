@@ -17,6 +17,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bible")
 	TArray<class UDataTable*> Tables;
 	virtual void BeginPlay() override;
+
+	FString GetBible(int32 Index);
 };
 
 
