@@ -28,8 +28,8 @@ void AInternationalBibleGameMode::BeginPlay()
 	// UDataTable* SkeletalMeshAsset3 = LoadObject<UDataTable>(NULL, Tables[0], NULL, LOAD_None, NULL);
 
 	TArray<FName> RowNames;
-	RowNames = Tables[0]->GetRowNames();
-	TArray<FString> EachBibles;
+	RowNames = Tables[2]->GetRowNames();
+	// TArray<FString> EachBibles;
 
 	FString Test;
 
@@ -38,7 +38,7 @@ void AInternationalBibleGameMode::BeginPlay()
 		FAfrikaansTable* Info = Tables[0]->FindRow<FAfrikaansTable>(Name, FString(""));
 		if (Info->BookNumber == 1 && Info->Chapter == 1)
 		{
-			EachBibles.Add(Info->Text);
+			// EachBibles.Add(Info->Text);
 
 			Test.Append(Info->Text + "\n");
 
