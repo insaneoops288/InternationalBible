@@ -39,11 +39,31 @@ FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int
 		FAfrikaansTable* Info = SelectedTable->FindRow<FAfrikaansTable>(Key, FString(""));
 		if (Info->BookNumber == BookNumber && Info->Chapter == Chapter)
 		{
-			ColectStrings.Append(Info->Text + "\n");
+			ColectStrings.Append(Info->Text + "\n\n\n\n\n");
 		}
 	}
 
 	UE_LOG(LogTemp, Warning, TEXT("%s"), *ColectStrings);
+
+	return ColectStrings;
+}
+
+TArray<FString> AInternationalBibleGameMode::GetBibles(int32 Index, int32 BookNumber, int32 Chapter)
+{
+	UDataTable* SelectedTable = Tables[Index];
+
+	TArray<FName> RowNames = SelectedTable->GetRowNames();
+
+	TArray<FString> ColectStrings;
+
+	for (auto& Key : RowNames)
+	{
+		FAfrikaansTable* Info = SelectedTable->FindRow<FAfrikaansTable>(Key, FString(""));
+		if (Info->BookNumber == BookNumber && Info->Chapter == Chapter)
+		{
+			ColectStrings.Add(Info->Text);
+		}
+	}
 
 	return ColectStrings;
 }

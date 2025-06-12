@@ -19,6 +19,8 @@ public:
 	virtual void BeginPlay() override;
 
 	FString GetBible(int32 Index, int32 BookNumber, int32 Chapter);
+
+	TArray<FString> GetBibles(int32 Index, int32 BookNumber, int32 Chapter);
 };
 
 
