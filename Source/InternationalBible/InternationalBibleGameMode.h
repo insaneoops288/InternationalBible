@@ -6,6 +6,22 @@
 #include "GameFramework/GameModeBase.h"
 #include "InternationalBibleGameMode.generated.h"
 
+UENUM()
+enum class EBibleType
+{
+	None = -1,
+	AAA,
+	AAA,
+};
+
+UENUM()
+enum class EBibleCountryType
+{
+	None = -1,
+	AAA,
+	AAA,
+};
+
 UCLASS(minimalapi)
 class AInternationalBibleGameMode : public AGameModeBase
 {

@@ -23,7 +23,11 @@ void AInternationalBibleGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GetBible(4, 1, 1);
+	GetWorld()->GetFirstPlayerController()->bShowMouseCursor = true; //마우스 관련 처리, 컨트롤러
+	GetWorld()->GetFirstPlayerController()->bEnableClickEvents = true;
+	GetWorld()->GetFirstPlayerController()->bEnableMouseOverEvents = true;
+
+	GetBible(28, 1, 1);
 }
 
 FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int32 Chapter)
