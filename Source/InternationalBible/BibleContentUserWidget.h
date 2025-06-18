@@ -19,6 +19,9 @@ public:
 	class UTextBlock* TextBibleContent = nullptr;
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+	class UTextBlock* TextBibleName = nullptr;
+
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 	class UButton* ButtonTest = nullptr;
 
 	UFUNCTION()

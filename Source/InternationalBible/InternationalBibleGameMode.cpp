@@ -16,7 +16,7 @@ AInternationalBibleGameMode::AInternationalBibleGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
-	
+	BibleIndex = 0;
 }
 
 void AInternationalBibleGameMode::BeginPlay()
@@ -33,6 +33,7 @@ void AInternationalBibleGameMode::BeginPlay()
 FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int32 Chapter)
 {
 	UDataTable* SelectedTable = Tables[Index];
+	BibleName = SelectedTable->GetName();
 
 	TArray<FName> RowNames = SelectedTable->GetRowNames();
 

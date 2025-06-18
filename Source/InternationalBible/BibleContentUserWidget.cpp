@@ -13,9 +13,16 @@ void UBibleContentUserWidget::OnButtonTestClicked()
 {
 	AInternationalBibleGameMode* GameMode = Cast<AInternationalBibleGameMode>(UGameplayStatics::GetGameMode(GetWorld()));
 
-	FString BibleMessage = GameMode->GetBible(28, 1, 1);
+	if (GameMode->BibleIndex >= GameMode->Tables.Num())
+		GameMode->BibleIndex = 0;
+
+	FString BibleMessage = GameMode->GetBible(GameMode->BibleIndex, 1, 1);
 	TextBibleContent->SetText(FText::FromString(BibleMessage));
 	TextBibleContent->Font.Size = 50;
+
+	TextBibleName->SetText(FText::FromString(GameMode->BibleName));
+
+	GameMode->BibleIndex++;
 }
 
 void UBibleContentUserWidget::NativeConstruct()
