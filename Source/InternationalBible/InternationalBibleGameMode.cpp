@@ -27,7 +27,7 @@ void AInternationalBibleGameMode::BeginPlay()
 	GetWorld()->GetFirstPlayerController()->bEnableClickEvents = true;
 	GetWorld()->GetFirstPlayerController()->bEnableMouseOverEvents = true;
 
-	GetBible(28, 1, 1);
+	// GetBible(28, 1, 1);
 }
 
 FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int32 Chapter)

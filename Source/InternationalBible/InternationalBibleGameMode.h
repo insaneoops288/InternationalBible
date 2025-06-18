@@ -11,7 +11,7 @@ enum class EBibleType
 {
 	None = -1,
 	AAA,
-	AAA,
+	// AAA,
 };
 
 UENUM()
@@ -19,7 +19,7 @@ enum class EBibleCountryType
 {
 	None = -1,
 	AAA,
-	AAA,
+	// AAA,
 };
 
 UCLASS(minimalapi)
