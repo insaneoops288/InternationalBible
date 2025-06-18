@@ -43,7 +43,7 @@ FString AInternationalBibleGameMode::GetBible(int32 Index, int32 BookNumber, int
 		FAfrikaansTable* Info = SelectedTable->FindRow<FAfrikaansTable>(Key, FString(""));
 		if (Info->BookNumber == BookNumber && Info->Chapter == Chapter)
 		{
-			ColectStrings.Append(Info->Text + "\n\n\n\n\n");
+			ColectStrings.Append(Info->Text + "\n\n");
 		}
 	}
 
