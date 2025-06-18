@@ -15,7 +15,7 @@ void UBibleContentUserWidget::OnButtonTestClicked()
 
 	FString BibleMessage = GameMode->GetBible(28, 1, 1);
 	TextBibleContent->SetText(FText::FromString(BibleMessage));
-	// TextBibleContent->Setapple
+	TextBibleContent->Font.Size = 50;
 }
 
 void UBibleContentUserWidget::NativeConstruct()
