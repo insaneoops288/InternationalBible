@@ -21,7 +21,7 @@ void UBibleContentUserWidget::OnButtonTestClicked()
 	TextBibleContent->Font.Size = 50;
 
 	// FString InternationalBibleName = GameMode->IntenationalBibles[GameMode->BibleIndex];
-	TextBibleName->SetText(FText::FromString(GameMode->BibleName));
+	TextBibleName->SetText(FText::FromString(GameMode->IntenationalBibles[GameMode->BibleIndex]));
 
 	GameMode->BibleIndex++;
 }

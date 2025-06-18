@@ -34,7 +34,8 @@ public:
 	TArray<class UDataTable*> Tables;
 	virtual void BeginPlay() override;
 
-	TMap<FString, FString> IntenationalBibles;
+	// TMap<FString, FString> IntenationalBibles;
+	TArray<FString> IntenationalBibles;
 
 	FString GetBible(int32 Index, int32 BookNumber, int32 Chapter);
 
