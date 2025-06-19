@@ -113,6 +113,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bible")
 	TArray<class UDataTable*> Tables;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bible")
+    class UDataTable* OldTestamentTable;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bible")
+    class UDataTable* NewTestamentTable;
+
 	virtual void BeginPlay() override;
 
 	// TMap<FString, FString> IntenationalBibles;
