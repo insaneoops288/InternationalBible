@@ -27,6 +27,24 @@ public:
 	FString Text;
 };
 
+USTRUCT(BlueprintType)
+struct FBibleCount : public FTableRowBase
+{
+public:
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItem")
+	int32 ID;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItem")
+	FString English;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItem")
+	FString Korean;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItem")
+	int32 Count;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "InventoryItem")
+	FString SourceEnglish;
+};
+
 /**
  * 
  */
