@@ -63,7 +63,6 @@ AInternationalBibleGameMode::AInternationalBibleGameMode()
 	IntenationalBibles.Add(TEXT("schlachter"), TEXT("Schlachter Bibel (1951)"));
 	IntenationalBibles.Add(TEXT("segond_1910"), TEXT("Louis Segond 1910 (1910"));
 	IntenationalBibles.Add(TEXT("stve"), TEXT("Staten Vertaling"));
-	IntenationalBibles.Add(TEXT("swahili"), TEXT("Swahili NT"));
 	IntenationalBibles.Add(TEXT("synodal"), TEXT("Synodal (1876)"));
 	IntenationalBibles.Add(TEXT("tagab"), TEXT("Tagalog Ang Biblia (1905)"));
 	IntenationalBibles.Add(TEXT("turkish"), TEXT("Turkish"));
@@ -86,7 +85,7 @@ AInternationalBibleGameMode::AInternationalBibleGameMode()
 	IntenationalBibles.Add(TEXT("Cornilescu"));
 	IntenationalBibles.Add(TEXT("Coverdale Bible (1535)"));
 	IntenationalBibles.Add(TEXT("Diodati (1649)"));
-	IntenationalBibles.Add( TEXT("Elberfelder (1871)"));
+	IntenationalBibles.Add(TEXT("Elberfelder (1871)"));
 	IntenationalBibles.Add(TEXT("Elberfelder (1905)"));
 	IntenationalBibles.Add(TEXT("La Bible de l'Épée (2005)"));
 	IntenationalBibles.Add(TEXT("Fidela Biblia în limba română (2011-2016)"));
@@ -113,7 +112,6 @@ AInternationalBibleGameMode::AInternationalBibleGameMode()
 	IntenationalBibles.Add(TEXT("Schlachter Bibel (1951)"));
 	IntenationalBibles.Add(TEXT("Louis Segond 1910 (1910"));
 	IntenationalBibles.Add(TEXT("Staten Vertaling"));
-	IntenationalBibles.Add(TEXT("Swahili NT"));
 	IntenationalBibles.Add(TEXT("Synodal (1876)"));
 	IntenationalBibles.Add(TEXT("Tagalog Ang Biblia (1905)"));
 	IntenationalBibles.Add(TEXT("Turkish"));
